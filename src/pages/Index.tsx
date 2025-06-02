@@ -225,6 +225,16 @@ const Index = () => {
               </p>
             </CardContent>
           </Card>
+          <script type="text/javascript">
+	atOptions = {
+		'key' : '1319be9b6b8cafea5168bcea3a69946a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/1319be9b6b8cafea5168bcea3a69946a/invoke.js"></script>
 
           <Card className="bg-gradient-to-r from-red-600 to-red-700 border-0">
             <CardContent className="p-6 text-center">
@@ -237,6 +247,16 @@ const Index = () => {
               </p>
             </CardContent>
           </Card>
+          <script type="text/javascript">
+	atOptions = {
+		'key' : '1319be9b6b8cafea5168bcea3a69946a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/1319be9b6b8cafea5168bcea3a69946a/invoke.js"></script>
 
           <Card className="bg-gradient-to-r from-blue-600 to-blue-700 border-0">
             <CardContent className="p-6 text-center">
@@ -250,6 +270,16 @@ const Index = () => {
             </CardContent>
           </Card>
         </div>
+        <script type="text/javascript">
+	atOptions = {
+		'key' : '1319be9b6b8cafea5168bcea3a69946a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/1319be9b6b8cafea5168bcea3a69946a/invoke.js"></script>
 
         {/* Items Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -265,6 +295,16 @@ const Index = () => {
             />
           ))}
         </div>
+        <script type="text/javascript">
+	atOptions = {
+		'key' : '1319be9b6b8cafea5168bcea3a69946a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/1319be9b6b8cafea5168bcea3a69946a/invoke.js"></script>
 
         {/* Footer */}
         <div className="text-center mt-12 text-gray-400">
