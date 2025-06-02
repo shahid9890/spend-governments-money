@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { RefreshCcw } from 'lucide-react';
+import { RefreshCcw, Github, Linkedin, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ItemCard from '@/components/ItemCard';
@@ -19,105 +18,105 @@ const items: Item[] = [
     id: 1,
     name: "Big Mac",
     price: 5,
-    image: "🍔",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop",
     description: "McDonald's classic burger"
   },
   {
     id: 2,
     name: "Coffee",
     price: 4,
-    image: "☕",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=300&fit=crop",
     description: "Premium coffee cup"
   },
   {
     id: 3,
     name: "iPhone 15 Pro",
     price: 1199,
-    image: "📱",
+    image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=300&h=300&fit=crop",
     description: "Latest Apple smartphone"
   },
   {
     id: 4,
     name: "AirPods Pro",
     price: 249,
-    image: "🎧",
+    image: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=300&h=300&fit=crop",
     description: "Wireless noise-cancelling earbuds"
   },
   {
     id: 5,
     name: "Tesla Model S",
     price: 89990,
-    image: "🚗",
+    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=300&h=300&fit=crop",
     description: "Luxury electric vehicle"
   },
   {
     id: 6,
     name: "Rolex Watch",
     price: 15000,
-    image: "⌚",
+    image: "https://images.unsplash.com/photo-1523170335258-f5c54ae6c5a8?w=300&h=300&fit=crop",
     description: "Swiss luxury timepiece"
   },
   {
     id: 7,
     name: "Gaming PC",
     price: 3500,
-    image: "🖥️",
+    image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=300&h=300&fit=crop",
     description: "High-end gaming computer"
   },
   {
     id: 8,
     name: "Designer Handbag",
     price: 2500,
-    image: "👜",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop",
     description: "Luxury fashion accessory"
   },
   {
     id: 9,
     name: "Vacation Package",
     price: 8000,
-    image: "🏖️",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop",
     description: "Luxury resort getaway"
   },
   {
     id: 10,
     name: "Motorcycle",
     price: 25000,
-    image: "🏍️",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop",
     description: "High-performance motorcycle"
   },
   {
     id: 11,
     name: "Luxury House",
     price: 2500000,
-    image: "🏠",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=300&h=300&fit=crop",
     description: "Beautiful mansion"
   },
   {
     id: 12,
     name: "Yacht",
     price: 15000000,
-    image: "🛥️",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&h=300&fit=crop",
     description: "Luxury sailing vessel"
   },
   {
     id: 13,
     name: "Private Jet",
     price: 60000000,
-    image: "✈️",
+    image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=300&h=300&fit=crop",
     description: "Personal aircraft"
   },
   {
     id: 14,
     name: "Sports Team",
     price: 1500000000,
-    image: "⚽",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=300&fit=crop",
     description: "Professional sports franchise"
   },
   {
     id: 15,
     name: "Space Mission",
     price: 2000000000,
-    image: "🚀",
+    image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=300&h=300&fit=crop",
     description: "Private space exploration"
   }
 ];
@@ -275,24 +274,27 @@ const Index = () => {
               href="https://github.com/shahid9890" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
             >
+              <Github className="w-4 h-4" />
               GitHub
             </a>
             <a 
               href="https://www.linkedin.com/in/shahid-shaikh-544926334" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
             >
+              <Linkedin className="w-4 h-4" />
               LinkedIn
             </a>
             <a 
               href="https://mvp.microsoft.com/en-US/studentambassadors/profile/cb8d63e4-7337-4cef-86f7-66af35653776" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
             >
+              <Award className="w-4 h-4" />
               MLSA Profile
             </a>
           </div>

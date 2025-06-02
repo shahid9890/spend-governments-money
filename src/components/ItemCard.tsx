@@ -70,8 +70,16 @@ const ItemCard: React.FC<ItemCardProps> = ({
     `}>
       <CardHeader className="pb-2">
         <div className="text-center">
-          <div className="text-4xl mb-2 animate-pulse">
-            {item.image}
+          <div className="w-full h-32 mb-2 overflow-hidden rounded-lg">
+            <img 
+              src={item.image} 
+              alt={item.name}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              onError={(e) => {
+                // Fallback to a default image if the image fails to load
+                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=300&fit=crop';
+              }}
+            />
           </div>
           <h3 className="text-white font-semibold text-lg">
             {item.name}
