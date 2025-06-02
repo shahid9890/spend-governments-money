@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 
 interface Item {
   id: number;
@@ -17,6 +18,7 @@ interface ItemCardProps {
   quantity: number;
   onBuy: () => void;
   onSell: () => void;
+  onQuantityChange: (newQuantity: number) => void;
   canAfford: boolean;
 }
 
@@ -25,8 +27,11 @@ const ItemCard: React.FC<ItemCardProps> = ({
   quantity, 
   onBuy, 
   onSell, 
+  onQuantityChange,
   canAfford 
 }) => {
+  const [inputValue, setInputValue] = useState(quantity.toString());
+
   const formatPrice = (price: number) => {
     if (price >= 1000000000) {
       return `$${(price / 1000000000).toFixed(1)}B`;
@@ -37,6 +42,21 @@ const ItemCard: React.FC<ItemCardProps> = ({
     }
     return `$${price.toLocaleString()}`;
   };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setInputValue(value);
+    
+    const numValue = parseInt(value) || 0;
+    if (numValue >= 0) {
+      onQuantityChange(numValue);
+    }
+  };
+
+  // Update input value when quantity prop changes (from + or - buttons)
+  React.useEffect(() => {
+    setInputValue(quantity.toString());
+  }, [quantity]);
 
   return (
     <Card className={`
@@ -83,10 +103,14 @@ const ItemCard: React.FC<ItemCardProps> = ({
             <Minus className="w-4 h-4" />
           </Button>
 
-          <div className="flex-1 text-center">
-            <span className="text-white font-semibold text-lg">
-              {quantity}
-            </span>
+          <div className="flex-1">
+            <Input
+              type="number"
+              min="0"
+              value={inputValue}
+              onChange={handleInputChange}
+              className="text-center bg-slate-700 border-slate-600 text-white font-semibold text-lg h-10"
+            />
           </div>
 
           <Button

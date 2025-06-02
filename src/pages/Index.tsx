@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { RefreshCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -170,6 +169,27 @@ const Index = () => {
     }
   };
 
+  const handleQuantityChange = (item: Item, newQuantity: number) => {
+    const currentQuantity = purchases[item.id] || 0;
+    const difference = newQuantity - currentQuantity;
+    const cost = difference * item.price;
+
+    if (difference > 0 && money < cost) {
+      toast({
+        title: "Insufficient funds!",
+        description: "You don't have enough money for this quantity.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setMoney(prev => prev - cost);
+    setPurchases(prev => ({
+      ...prev,
+      [item.id]: newQuantity
+    }));
+  };
+
   const resetGame = () => {
     setMoney(initialMoney);
     setPurchases({});
@@ -240,6 +260,7 @@ const Index = () => {
               quantity={purchases[item.id] || 0}
               onBuy={() => buyItem(item)}
               onSell={() => sellItem(item)}
+              onQuantityChange={(newQuantity) => handleQuantityChange(item, newQuantity)}
               canAfford={money >= item.price}
             />
           ))}
