@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { RefreshCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -205,7 +206,7 @@ const Index = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-4">
-            Spend Bill Gates' Money
+            Spend Government's Money
           </h1>
           <p className="text-gray-300 text-lg mb-6">
             You have $100 billion to spend. What will you buy?
@@ -268,7 +269,33 @@ const Index = () => {
 
         {/* Footer */}
         <div className="text-center mt-12 text-gray-400">
-          <p>Inspired by Neal.fun's "Spend Bill Gates' Money"</p>
+          <p className="mb-2">Design by Shahid Shaikh</p>
+          <div className="flex justify-center space-x-6 text-sm">
+            <a 
+              href="https://github.com/shahid9890" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/shahid-shaikh-544926334" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="https://mvp.microsoft.com/en-US/studentambassadors/profile/cb8d63e4-7337-4cef-86f7-66af35653776" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              MLSA Profile
+            </a>
+          </div>
         </div>
       </div>
     </div>
